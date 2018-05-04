@@ -1,0 +1,10 @@
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Debug\AerotechInterface.exe.config
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Debug\AerotechInterface.exe
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Debug\AerotechInterface.pdb
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.csprojResolveAssemblyReference.cache
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.MacroGenerator.resources
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.Properties.Resources.resources
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.csproj.GenerateResource.Cache
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.exe
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.pdb
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.AxesControls.resources
