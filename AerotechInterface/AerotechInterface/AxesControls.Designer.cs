@@ -47,11 +47,15 @@
             this.numericUpDownLaser = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownRep = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
+            this.labelSpeed = new System.Windows.Forms.Label();
+            this.numericUpDownSpeed = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox_X
@@ -137,6 +141,7 @@
             this.checkBoxLaser.TabIndex = 9;
             this.checkBoxLaser.Text = "Laser";
             this.checkBoxLaser.UseVisualStyleBackColor = true;
+            this.checkBoxLaser.CheckedChanged += new System.EventHandler(this.checkBoxLaser_CheckedChanged);
             // 
             // label5
             // 
@@ -152,7 +157,7 @@
             // 
             this.checkBoxInc.AutoSize = true;
             this.checkBoxInc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxInc.Location = new System.Drawing.Point(27, 263);
+            this.checkBoxInc.Location = new System.Drawing.Point(27, 323);
             this.checkBoxInc.Name = "checkBoxInc";
             this.checkBoxInc.Size = new System.Drawing.Size(164, 33);
             this.checkBoxInc.TabIndex = 15;
@@ -164,7 +169,7 @@
             // 
             this.checkBoxAbs.AutoSize = true;
             this.checkBoxAbs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAbs.Location = new System.Drawing.Point(212, 263);
+            this.checkBoxAbs.Location = new System.Drawing.Point(212, 323);
             this.checkBoxAbs.Name = "checkBoxAbs";
             this.checkBoxAbs.Size = new System.Drawing.Size(133, 33);
             this.checkBoxAbs.TabIndex = 16;
@@ -176,7 +181,7 @@
             // 
             this.checkBoxGlo.AutoSize = true;
             this.checkBoxGlo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxGlo.Location = new System.Drawing.Point(384, 263);
+            this.checkBoxGlo.Location = new System.Drawing.Point(384, 323);
             this.checkBoxGlo.Name = "checkBoxGlo";
             this.checkBoxGlo.Size = new System.Drawing.Size(110, 33);
             this.checkBoxGlo.TabIndex = 17;
@@ -188,7 +193,7 @@
             // 
             this.button_AxesConfirm.Enabled = false;
             this.button_AxesConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_AxesConfirm.Location = new System.Drawing.Point(219, 317);
+            this.button_AxesConfirm.Location = new System.Drawing.Point(219, 377);
             this.button_AxesConfirm.Name = "button_AxesConfirm";
             this.button_AxesConfirm.Size = new System.Drawing.Size(128, 49);
             this.button_AxesConfirm.TabIndex = 18;
@@ -272,6 +277,7 @@
             // 
             // numericUpDownRep
             // 
+            this.numericUpDownRep.Enabled = false;
             this.numericUpDownRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownRep.Location = new System.Drawing.Point(166, 204);
             this.numericUpDownRep.Maximum = new decimal(new int[] {
@@ -304,11 +310,58 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Rep Rate";
             // 
+            // labelSpeed
+            // 
+            this.labelSpeed.AutoSize = true;
+            this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpeed.Location = new System.Drawing.Point(46, 252);
+            this.labelSpeed.Name = "labelSpeed";
+            this.labelSpeed.Size = new System.Drawing.Size(85, 29);
+            this.labelSpeed.TabIndex = 27;
+            this.labelSpeed.Text = "Speed";
+            // 
+            // numericUpDownSpeed
+            // 
+            this.numericUpDownSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownSpeed.Location = new System.Drawing.Point(166, 252);
+            this.numericUpDownSpeed.Maximum = new decimal(new int[] {
+            300000,
+            0,
+            0,
+            0});
+            this.numericUpDownSpeed.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownSpeed.Name = "numericUpDownSpeed";
+            this.numericUpDownSpeed.Size = new System.Drawing.Size(282, 35);
+            this.numericUpDownSpeed.TabIndex = 26;
+            this.numericUpDownSpeed.ThousandsSeparator = true;
+            this.numericUpDownSpeed.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(470, 253);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 29);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "µm/s";
+            // 
             // LAxesControlsLaser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 389);
+            this.ClientSize = new System.Drawing.Size(579, 438);
+            this.Controls.Add(this.labelSpeed);
+            this.Controls.Add(this.numericUpDownSpeed);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.numericUpDownRep);
             this.Controls.Add(this.numericUpDownLaser);
@@ -329,12 +382,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox_X);
             this.Name = "LAxesControlsLaser";
-            this.Text = "Laser Linear Axes Controls";
+            this.Text = "Linear Motion";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +415,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDownLaser;
         private System.Windows.Forms.NumericUpDown numericUpDownRep;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelSpeed;
+        private System.Windows.Forms.NumericUpDown numericUpDownSpeed;
+        private System.Windows.Forms.Label label8;
     }
 }

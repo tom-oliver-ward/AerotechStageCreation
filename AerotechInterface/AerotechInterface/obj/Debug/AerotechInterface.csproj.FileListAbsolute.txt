@@ -7,4 +7,4 @@ C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\Aerotech
 C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.csproj.GenerateResource.Cache
 C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.exe
 C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.pdb
-C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.AxesControls.resources
+C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.LAxesControlsLaser.resources
