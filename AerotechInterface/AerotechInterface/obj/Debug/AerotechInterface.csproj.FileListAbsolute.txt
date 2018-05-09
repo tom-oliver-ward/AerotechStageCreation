@@ -8,3 +8,13 @@ C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\Aerotech
 C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.exe
 C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.pdb
 C:\Users\tom2s\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.LAxesControlsLaser.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Debug\AerotechInterface.exe.config
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.exe
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.pdb
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Debug\AerotechInterface.exe
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Debug\AerotechInterface.pdb
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.csprojResolveAssemblyReference.cache
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.LAxesControlsLaser.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.MacroGenerator.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.Properties.Resources.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.csproj.GenerateResource.Cache

@@ -31,6 +31,7 @@ namespace AerotechInterface
         public MacroGenerator()
         {
             InitializeComponent();
+            
         }
 
 
@@ -47,5 +48,35 @@ namespace AerotechInterface
             //shows the form
             LAxesControlsLaser.ShowDialog();
         }
+
+        private void listBoxMacro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxMacro_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (this.listBoxMacro.SelectedItem == null) return;
+            listBoxMacro.DoDragDrop(listBoxMacro.Text, DragDropEffects.Copy |  DragDropEffects.Move);
+        }
+
+        private void listBoxMacro_DragDrop(object sender, DragEventArgs e)
+        {
+            Point point = listBoxMacro.PointToClient(new Point(e.X, e.Y));
+            int index = this.listBoxMacro.IndexFromPoint(point);
+            if (index < 0) index = this.listBoxMacro.Items.Count - 1;
+            object data = e.Data.GetData(typeof(DateTime));
+            this.listBoxMacro.Items.Remove(data);
+            this.listBoxMacro.Items.Insert(index, data);
+        }
+
+        private void listBoxMacro_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+
+
+
     }
 }

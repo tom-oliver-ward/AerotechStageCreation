@@ -7,22 +7,31 @@ namespace AerotechInterface
     {
         internal void addToLists(MacroGenerator macroGenerator)
         {
+            //adds the macroline to the macro generator list
             macroGenerator.macro.Add(macroGenerator.macroLine);
-            string macroOutput=translate(macroGenerator);
+
+            //translates this into a readable version of the unput
+            string macroOutput = translate(macroGenerator.macroLine);
+
+            //adds this to the displayed list
             macroGenerator.listBoxMacro.Items.Add(macroOutput);
+
+            //clears macroline for the next input
             Array.Clear(macroGenerator.macroLine, 0, macroGenerator.macroLine.Length);
         }
 
-        private string  translate(MacroGenerator macroGenerator)
+        private string translate(double[] macroLine)
         {
-            int pad = 15;
-            string macroOutput;
-            string movementType;
-            if (macroGenerator.macroLine[6] == 0)
+            
+            string macroOutput;                     //string to store the command in a readable way
+            string movementType;                    //string to store movement type in string form
+
+            //finds movement type
+            if (macroLine[6] == 0)
             {
                 movementType = "Incremental";
             }
-            else if (macroGenerator.macroLine[6] == 1)
+            else if (macroLine[6] == 1)
             {
                 movementType = "Absolute";
             }
@@ -30,30 +39,29 @@ namespace AerotechInterface
             {
                 movementType = "Global";
             }
-            // use advanced options in string format to check spacing
-            string xOutput = string.Format("X:{0}µm", macroGenerator.macroLine[0]);
-            string yOutput = string.Format("Y:{0}µm", macroGenerator.macroLine[1]);
-            string zOutput = string.Format("Z:{0}µm", macroGenerator.macroLine[2]);
 
-            if (macroGenerator.macroLine[3]==0)
+            // inserts x, y & z data
+            string xOutput = string.Format("X:{0}µm", macroLine[0]);
+            string yOutput = string.Format("Y:{0}µm", macroLine[1]);
+            string zOutput = string.Format("Z:{0}µm", macroLine[2]);
+
+            //tests whether shot is required or nor
+            if (macroLine[3] == 0)
             {
-                string speed = string.Format("Speed:{0}µm/s", macroGenerator.macroLine[5]);
-                macroOutput = xOutput.PadRight(pad) + yOutput.PadRight(pad) +zOutput.PadRight(pad) + speed.PadRight(20) + " ".PadRight(30)
-                    + movementType.PadRight(pad);
+                //inserts speed data
+                string speed = string.Format("Speed:{0}µm/s", macroLine[5]);
+                //spaces items correctly for columns
+                macroOutput = string.Format("{0,-15}{1,-15}{2,-15}{3,-40}{4,-15}", xOutput, yOutput, zOutput, speed, movementType);
             }
             else
             {
-                string shots = string.Format("Shots:{0}", macroGenerator.macroLine[3]);
-                string repRate = string.Format("Rep Rate:{0}Hz", macroGenerator.macroLine[4]);
-                macroOutput = xOutput.PadLeft(pad) + yOutput.PadLeft(pad) + zOutput.PadLeft(pad) + shots.PadLeft(30) + repRate.PadLeft(30)
-                    + movementType.PadLeft(pad);
-                //macroOutput = string.Format("X:{0}µm\tY:{1}µm\tZ:{2}µm\tShots:{3}\tRepRate:{4}Hz\t{5}",
-                //macroGenerator.macroLine[0], macroGenerator.macroLine[1], macroGenerator.macroLine[2], macroGenerator.macroLine[3],
-                //macroGenerator.macroLine[4], movementType);
-            }        
-
+                ///inserts shots and repRate data
+                string shots = string.Format("Shots:{0}", macroLine[3]);
+                string repRate = string.Format("Rep Rate:{0}Hz", macroLine[4]);
+                //spaces utems correctly for columns
+                macroOutput = string.Format("{0,-15}{1,-15}{2,-15}{3,-20}{4,-20}{5,-15}", xOutput, yOutput, zOutput, shots, repRate, movementType);
+            }
             
-
             return macroOutput;
         }
     }
