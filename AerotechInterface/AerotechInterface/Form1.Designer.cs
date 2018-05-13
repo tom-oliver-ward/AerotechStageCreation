@@ -31,6 +31,9 @@
             this.listBoxMacro = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button_LMotion = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.buttonMUp = new System.Windows.Forms.Button();
+            this.buttonMDown = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxMacro
@@ -40,9 +43,9 @@
             this.listBoxMacro.FormattingEnabled = true;
             this.listBoxMacro.ItemHeight = 18;
             this.listBoxMacro.Location = new System.Drawing.Point(19, 53);
-            this.listBoxMacro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxMacro.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxMacro.Name = "listBoxMacro";
-            this.listBoxMacro.Size = new System.Drawing.Size(1205, 274);
+            this.listBoxMacro.Size = new System.Drawing.Size(1130, 274);
             this.listBoxMacro.TabIndex = 0;
             this.listBoxMacro.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBoxMacro_MouseClick);
             this.listBoxMacro.SelectedIndexChanged += new System.EventHandler(this.listBoxMacro_SelectedIndexChanged);
@@ -63,7 +66,7 @@
             // 
             this.button_LMotion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_LMotion.Location = new System.Drawing.Point(19, 350);
-            this.button_LMotion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_LMotion.Margin = new System.Windows.Forms.Padding(2);
             this.button_LMotion.Name = "button_LMotion";
             this.button_LMotion.Size = new System.Drawing.Size(103, 52);
             this.button_LMotion.TabIndex = 2;
@@ -71,15 +74,41 @@
             this.button_LMotion.UseVisualStyleBackColor = true;
             this.button_LMotion.Click += new System.EventHandler(this.button_LMotion_Click);
             // 
+            // buttonMUp
+            // 
+            this.buttonMUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMUp.Location = new System.Drawing.Point(1153, 53);
+            this.buttonMUp.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMUp.Name = "buttonMUp";
+            this.buttonMUp.Size = new System.Drawing.Size(69, 52);
+            this.buttonMUp.TabIndex = 3;
+            this.buttonMUp.Text = "Move Up";
+            this.buttonMUp.UseVisualStyleBackColor = true;
+            this.buttonMUp.Click += new System.EventHandler(this.buttonMUp_Click);
+            // 
+            // buttonMDown
+            // 
+            this.buttonMDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMDown.Location = new System.Drawing.Point(1153, 275);
+            this.buttonMDown.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMDown.Name = "buttonMDown";
+            this.buttonMDown.Size = new System.Drawing.Size(69, 52);
+            this.buttonMDown.TabIndex = 4;
+            this.buttonMDown.Text = "Move Down";
+            this.buttonMDown.UseVisualStyleBackColor = true;
+            this.buttonMDown.Click += new System.EventHandler(this.buttonMDown_Click);
+            // 
             // MacroGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 684);
+            this.Controls.Add(this.buttonMDown);
+            this.Controls.Add(this.buttonMUp);
             this.Controls.Add(this.button_LMotion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxMacro);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MacroGenerator";
             this.Text = "Macro Generator";
             this.ResumeLayout(false);
@@ -91,6 +120,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_LMotion;
         public System.Windows.Forms.ListBox listBoxMacro;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button buttonMUp;
+        private System.Windows.Forms.Button buttonMDown;
     }
 }
 

@@ -116,7 +116,7 @@ namespace AerotechInterface
         }
 
         /// <summary>
-        /// 
+        /// autoflips options
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

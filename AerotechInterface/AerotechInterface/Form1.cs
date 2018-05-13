@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace AerotechInterface
 {
+
     public partial class MacroGenerator : Form
     {
+        public Process process = new Process();
         //The list containing the actual Macro Commands
         //0 = x
         //1 = y
@@ -24,6 +26,8 @@ namespace AerotechInterface
 
         //variable to store the current macroline
         public double[] macroLine = new  double[7];
+        public int selected;
+
         
         /// <summary>
         /// initialises this form
@@ -51,6 +55,14 @@ namespace AerotechInterface
 
         private void listBoxMacro_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBoxMacro.SelectedIndex==-1)
+            {
+                listBoxMacro.SetSelected(selected,true);
+            }
+            else
+            {
+                selected = listBoxMacro.SelectedIndex;
+            }
 
         }
 
@@ -73,6 +85,28 @@ namespace AerotechInterface
         private void listBoxMacro_DragOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Move;
+        }
+
+
+    /// <summary>
+    /// Moves item up in list
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+        private void buttonMUp_Click(object sender, EventArgs e)
+        {
+            if (this.listBoxMacro.SelectedItem == null) return;
+
+            int newIndex = listBoxMacro.SelectedIndex - 1;
+            process.moveListItem(this, newIndex);
+        }
+
+        private void buttonMDown_Click(object sender, EventArgs e)
+        {
+            if (this.listBoxMacro.SelectedItem == null) return;
+
+            int newIndex = listBoxMacro.SelectedIndex + 1;
+            process.moveListItem(this, newIndex);
         }
 
 

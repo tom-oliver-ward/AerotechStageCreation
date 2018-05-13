@@ -64,5 +64,12 @@ namespace AerotechInterface
             
             return macroOutput;
         }
+
+        internal void moveListItem(MacroGenerator macroGenerator, int newIndex)
+        {
+            var item = macroGenerator.listBoxMacro.Items[macroGenerator.listBoxMacro.SelectedIndex];
+            macroGenerator.listBoxMacro.Items.RemoveAt(macroGenerator.listBoxMacro.SelectedIndex);
+            macroGenerator.listBoxMacro.Items.Insert(newIndex, item);
+        }
     }
 }
