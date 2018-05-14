@@ -10,26 +10,20 @@ using System.Windows.Forms;
 
 namespace AerotechInterface
 {
-    public partial class LAxesControlsLaser : Form
+    public partial class AngularAxesControl : Form
     {
+
         //initialises a variable to access MacroGenerator
         public MacroGenerator macroGenerator;
         public Process process = new Process();
-
         public bool laserCheck = false;
 
-        protected internal LAxesControlsLaser(MacroGenerator formObject)
+        public AngularAxesControl(MacroGenerator formObject)
         {
-            //assigns macroGenerator to the MacroGenerator class
-            macroGenerator = formObject;
             InitializeComponent();
+            macroGenerator = formObject;
         }
 
-        /// <summary>
-        /// Feeds back variables into the overall macro list
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void button_AxesConfirm_Click(object sender, EventArgs e)
         {
             int insertAtIndex = -1;
@@ -39,7 +33,7 @@ namespace AerotechInterface
                 MessageBox.Show("Please Enter A Number of Shots", "Error");
             }
             //checks if the user has unticked all the position options
-            else if(checkBoxStart.Checked == false && checkBoxEnd.Checked == false && checkBoxIndex.Checked == false)
+            else if (checkBoxStart.Checked == false && checkBoxEnd.Checked == false && checkBoxIndex.Checked == false)
             {
                 MessageBox.Show("Please select a position for entry", "Error");
             }
@@ -51,9 +45,9 @@ namespace AerotechInterface
             else
             {
                 //adds the x, y and z data
-                macroGenerator.macroLine[0] = (double)numericUpDownX.Value;
-                macroGenerator.macroLine[1] = (double)numericUpDownY.Value;
-                macroGenerator.macroLine[2] = (double)numericUpDownZ.Value;
+                macroGenerator.macroLine[0] = (double)numericUpDownSAngle.Value;
+                macroGenerator.macroLine[1] = (double)numericUpDownIAngle.Value;
+                macroGenerator.macroLine[2] = (double)numericUpDownRadius.Value;
 
                 //checks if the user wants to use the laser
                 if (checkBoxLaser.Checked == true)
@@ -76,8 +70,8 @@ namespace AerotechInterface
                 if (checkBoxAbs.Checked == true) { macroGenerator.macroLine[6] = 1; }
                 if (checkBoxGlo.Checked == true) { macroGenerator.macroLine[6] = 2; }
 
-                //sets to linear motion
-                macroGenerator.macroLine[7] = 0;
+                //sets to angular motion
+                macroGenerator.macroLine[7] = 1;
 
                 //Adds where in the list macro should be added
                 if (checkBoxStart.Checked == true) { insertAtIndex = 0; }
@@ -90,9 +84,6 @@ namespace AerotechInterface
                 //closes form
                 this.Close();
             }
-
-
-
         }
 
         /// <summary>
@@ -146,7 +137,6 @@ namespace AerotechInterface
         {
             laserCheck = !laserCheck;
             numericUpDownRep.Enabled = laserCheck;
-            numericUpDownLaser.Enabled = laserCheck;
             numericUpDownSpeed.Enabled = !laserCheck;
         }
 

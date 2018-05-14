@@ -18,3 +18,5 @@ C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\Aerote
 C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.MacroGenerator.resources
 C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.Properties.Resources.resources
 C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.csproj.GenerateResource.Cache
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.AngularAxesControl.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Debug\AerotechInterface.FileAndProgress.resources

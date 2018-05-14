@@ -1,0 +1,9 @@
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Release\AerotechInterface.exe.config
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Release\AerotechInterface.exe
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\bin\Release\AerotechInterface.pdb
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Release\AerotechInterface.LAxesControlsLaser.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Release\AerotechInterface.MacroGenerator.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Release\AerotechInterface.Properties.Resources.resources
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Release\AerotechInterface.csproj.GenerateResource.Cache
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Release\AerotechInterface.exe
+C:\Users\twar313\Documents\GitHub\AerotechStageCreation\AerotechInterface\AerotechInterface\obj\Release\AerotechInterface.pdb
