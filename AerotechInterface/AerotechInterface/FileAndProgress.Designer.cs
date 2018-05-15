@@ -95,6 +95,7 @@
             this.buttonConvert.TabIndex = 53;
             this.buttonConvert.Text = "Convert";
             this.buttonConvert.UseVisualStyleBackColor = true;
+            this.buttonConvert.Click += new System.EventHandler(this.buttonConvert_Click);
             // 
             // FileAndProgress
             // 

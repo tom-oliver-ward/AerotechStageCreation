@@ -27,5 +27,15 @@ namespace AerotechInterface
 
             }
         }
+
+        private void buttonConvert_Click(object sender, EventArgs e)
+        {
+            if(!Directory.Exists(textBoxFolderPath.Text))
+                {
+                MessageBox.Show("Invalid Path, directory does not exist", "Error");
+            }
+
+            
+        }
     }
 }
