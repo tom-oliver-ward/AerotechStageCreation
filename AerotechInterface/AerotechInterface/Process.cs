@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 
 namespace AerotechInterface
@@ -12,15 +13,19 @@ namespace AerotechInterface
 
             if (insertAtIndex==-1)
             {
-                //adds the macroline to the macro generator list
-                macroGenerator.macro.Add(macroGenerator.macroLine);
+                //adds the macroline to the macro generator list   
+                double[] copy = new double[macroGenerator.macroLine.Length];
+                macroGenerator.macroLine.CopyTo(copy, 0);               
+                macroGenerator.macro.Add(copy);
                 //adds this to the displayed list
                 macroGenerator.listBoxMacro.Items.Add(macroOutput);
             }
             else
             {
                 //ads the macroline to the generator list at the specified index
-                macroGenerator.macro.Insert(insertAtIndex, macroGenerator.macroLine);
+                double[] copy = new double[macroGenerator.macroLine.Length];
+                macroGenerator.macroLine.CopyTo(copy, 0);  
+                macroGenerator.macro.Insert(insertAtIndex, copy);                
                 //adds this to displayed list
                 macroGenerator.listBoxMacro.Items.Insert(insertAtIndex, macroOutput);
             }
@@ -107,6 +112,21 @@ namespace AerotechInterface
             
             //changes selection to the new entry
             macroGenerator.listBoxMacro.SetSelected(newIndex, true);
+        }
+
+        internal void macro2Aerotech(MacroGenerator macroGenerator, string path)
+        {
+            
+            using(StreamWriter sw = new StreamWriter(path))
+            {
+                sw.WriteLine("test");
+                foreach (double data in macroGenerator.macro[0])
+                {
+                    sw.WriteLine(data);
+                }
+                
+                
+            }
         }
     }
 }
