@@ -97,8 +97,9 @@ namespace AerotechInterface
             double[] itemM = macroGenerator.macro[macroGenerator.listBoxMacro.SelectedIndex];
 
             //removes the variable at that entry
-            macroGenerator.listBoxMacro.Items.RemoveAt(macroGenerator.listBoxMacro.SelectedIndex);
-            macroGenerator.macro.RemoveAt(macroGenerator.listBoxMacro.SelectedIndex);
+            int remove = macroGenerator.listBoxMacro.SelectedIndex;
+            macroGenerator.listBoxMacro.Items.RemoveAt(remove);
+            macroGenerator.macro.RemoveAt(remove);
 
             //inserts at the new specified point
             macroGenerator.listBoxMacro.Items.Insert(newIndex, item);
